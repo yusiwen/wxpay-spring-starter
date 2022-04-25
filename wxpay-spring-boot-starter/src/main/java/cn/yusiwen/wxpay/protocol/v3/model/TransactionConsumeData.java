@@ -96,9 +96,7 @@ public class TransactionConsumeData {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssXXX", timezone = "GMT+8")
     private LocalDateTime successTime;
     /**
-     * 在 1.0.0.RELEASE 直接返回了枚举字符串，1.0.2.RELEASE 中变更为枚举
-     *
-     * @since 1.0.0.RELEASE
+     * 支付状态
      */
     private TradeState tradeState;
     /**
@@ -107,10 +105,6 @@ public class TransactionConsumeData {
     private String tradeStateDesc;
     /**
      * 交易类型
-     * <p>
-     * 在 1.0.0.RELEASE 直接返回了枚举字符串，1.0.2.RELEASE 中变更为枚举
-     *
-     * @since 1.0.0.RELEASE
      */
     private TradeType tradeType;
     /**
