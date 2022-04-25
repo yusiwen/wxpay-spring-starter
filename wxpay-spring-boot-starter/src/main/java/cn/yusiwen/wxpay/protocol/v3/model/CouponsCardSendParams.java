@@ -41,13 +41,13 @@ public class CouponsCardSendParams {
      */
     private String cardId;
     /**
-     * 消费卡归属appid
+     * 消费卡归属appId
      */
-    private String appid;
+    private String appId;
     /**
-     * 需为消费卡归属appid生成的openid。
+     * 需为消费卡归属appId生成的openId。
      */
-    private String openid;
+    private String openId;
     /**
      * 商户此次发放凭据号。
      * <p>

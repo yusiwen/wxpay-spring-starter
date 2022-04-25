@@ -42,7 +42,7 @@ public class BaseProfitSharingModel extends BaseModel {
     /**
      * App ID
      */
-    private String appid;
+    private String appId;
     /**
      * Transaction ID
      */

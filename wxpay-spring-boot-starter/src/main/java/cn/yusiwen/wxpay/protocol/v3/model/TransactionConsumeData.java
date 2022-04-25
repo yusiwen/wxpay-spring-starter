@@ -44,27 +44,27 @@ public class TransactionConsumeData {
     /**
      * 直连模式应用ID，服务商模式请解析spAppid
      */
-    private String appid;
+    private String appId;
     /**
      * 直连模式商户号，服务商模式请解析spMchid
      */
-    private String mchid;
+    private String mchId;
     /**
      * 服务商模式-服务商APPID
      */
-    private String spAppid;
+    private String spAppId;
     /**
      * 服务商模式-服务商户号
      */
-    private String spMchid;
+    private String spMchId;
     /**
-     * 服务商模式-子商户appid
+     * 服务商模式-子商户appId
      */
-    private String subAppid;
+    private String subAppId;
     /**
      * 服务商模式-子商户商户id
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用
      */
@@ -121,9 +121,9 @@ public class TransactionConsumeData {
     @Data
     public static class Payer {
         /**
-         * 用户在直连商户appid下的唯一标识。
+         * 用户在直连商户appId下的唯一标识。
          */
-        private String openid;
+        private String openId;
     }
 
     /**

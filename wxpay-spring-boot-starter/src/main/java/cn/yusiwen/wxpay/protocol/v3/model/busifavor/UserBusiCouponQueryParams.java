@@ -34,11 +34,11 @@ public class UserBusiCouponQueryParams {
      */
     private String couponCode;
     /**
-     * 与当前调用接口商户号有绑定关系的appid。支持小程序appid与公众号appid。
+     * 与当前调用接口商户号有绑定关系的appId。支持小程序appId与公众号appId。
      */
-    private String appid;
+    private String appId;
     /**
-     * Openid信息，用户在appid下的唯一标识。
+     * Openid信息，用户在appId下的唯一标识。
      */
-    private String openid;
+    private String openId;
 }

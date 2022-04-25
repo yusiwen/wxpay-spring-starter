@@ -29,7 +29,7 @@ import lombok.Data;
 @Data
 public class CouponDetailsQueryParams {
     /**
-     * 用户在appid下授权得到的openid
+     * 用户在appId下授权得到的openId
      * <p>
      * 参考发券
      */

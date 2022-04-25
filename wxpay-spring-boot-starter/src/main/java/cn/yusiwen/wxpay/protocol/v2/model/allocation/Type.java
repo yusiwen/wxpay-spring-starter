@@ -32,7 +32,7 @@ public enum Type {
     MERCHANT_ID,
 
     /**
-     * 个人openid
+     * 个人openId
      */
     PERSONAL_OPENID
 }

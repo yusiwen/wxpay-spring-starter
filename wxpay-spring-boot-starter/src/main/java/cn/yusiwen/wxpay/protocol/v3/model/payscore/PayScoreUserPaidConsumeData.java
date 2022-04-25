@@ -33,7 +33,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The Appid.
      */
-    private String appid;
+    private String appId;
     /**
      * The Attach.
      */
@@ -49,7 +49,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The Mchid.
      */
-    private String mchid;
+    private String mchId;
     /**
      * The Need collection.
      */
@@ -61,7 +61,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The Openid.
      */
-    private String openid;
+    private String openId;
     /**
      * The Order id.
      */

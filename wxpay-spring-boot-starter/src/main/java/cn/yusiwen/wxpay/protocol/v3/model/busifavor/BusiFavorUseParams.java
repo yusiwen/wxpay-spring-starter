@@ -43,7 +43,7 @@ public class BusiFavorUseParams {
     /**
      * 公众账号ID
      */
-    private String appid;
+    private String appId;
     /**
      * 请求核销时间
      */
@@ -56,6 +56,6 @@ public class BusiFavorUseParams {
     /**
      * 用户标识，用户的唯一标识，做安全校验使用
      */
-    private String openid;
+    private String openId;
 
 }

@@ -40,15 +40,15 @@ public class PayScoreUserPermissionConsumeData {
     /**
      * The Appid.
      */
-    private String appid;
+    private String appId;
     /**
      * The Mchid.
      */
-    private String mchid;
+    private String mchId;
     /**
      * The Openid.
      */
-    private String openid;
+    private String openId;
     /**
      * The Openorclose time.
      */

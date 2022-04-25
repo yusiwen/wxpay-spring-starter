@@ -34,7 +34,7 @@ public class ProfitSharingOrder {
     /**
      * 应用ID，自动注入
      */
-    private String appid;
+    private String appId;
     /**
      * 微信订单号，必填
      */

@@ -100,8 +100,8 @@ public class WechatCombinePayApi extends AbstractApi {
      */
     private RequestEntity<?> combinePayFunction(WechatPayV3Type type, CombinePayParams params) {
         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-        params.setCombineAppid(v3.getAppId());
-        params.setCombineMchid(v3.getMchId());
+        params.setCombineAppId(v3.getAppId());
+        params.setCombineMchId(v3.getMchId());
 
         String notifyUrl = v3.getDomain().concat(params.getNotifyUrl());
         params.setNotifyUrl(notifyUrl);
@@ -139,8 +139,8 @@ public class WechatCombinePayApi extends AbstractApi {
      */
     private RequestEntity<?> combinePayFunction(WechatPayV3Type type, CombineH5PayParams params) {
         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-        params.setCombineAppid(v3.getAppId());
-        params.setCombineMchid(v3.getMchId());
+        params.setCombineAppId(v3.getAppId());
+        params.setCombineMchId(v3.getMchId());
 
         String notifyUrl = v3.getDomain().concat(params.getNotifyUrl());
         params.setNotifyUrl(notifyUrl);

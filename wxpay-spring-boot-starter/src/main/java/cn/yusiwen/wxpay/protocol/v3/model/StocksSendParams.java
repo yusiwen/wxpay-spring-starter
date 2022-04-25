@@ -33,9 +33,9 @@ public class StocksSendParams {
      */
     private String stockId;
     /**
-     * 用户openid 该openid需要与接口传入中的appid有对应关系。
+     * 用户openId 该openId需要与接口传入中的appId有对应关系。
      */
-    private String openid;
+    private String openId;
     /**
      * 商户单据号
      */
@@ -43,7 +43,7 @@ public class StocksSendParams {
     /**
      * 公众账号ID
      */
-    private String appid;
+    private String appId;
     /**
      * 创建批次的商户号
      */

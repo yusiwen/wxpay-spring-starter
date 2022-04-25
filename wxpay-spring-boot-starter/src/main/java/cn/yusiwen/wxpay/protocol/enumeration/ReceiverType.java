@@ -31,7 +31,7 @@ public enum ReceiverType {
      */
     MERCHANT_ID,
     /**
-     * 个人openid（由父商户APPID转换得到）
+     * 个人openId（由父商户APPID转换得到）
      */
     PERSONAL_OPENID,
     /**

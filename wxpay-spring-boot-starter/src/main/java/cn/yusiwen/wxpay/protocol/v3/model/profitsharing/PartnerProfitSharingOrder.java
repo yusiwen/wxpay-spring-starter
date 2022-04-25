@@ -34,11 +34,11 @@ public class PartnerProfitSharingOrder {
     /**
      * 子商户号，选填
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 服务商应用ID，自动注入
      */
-    private String appid;
+    private String appId;
     /**
      * 子商户应用ID，选填
      * <p>

@@ -33,9 +33,9 @@ import cn.yusiwen.wxpay.protocol.enumeration.UnfinishedReason;
 public class DiscountCardUserPaidConsumeData {
 
     /**
-     * 应用appid需要绑定微信商户平台
+     * 应用appId需要绑定微信商户平台
      */
-    private String appid;
+    private String appId;
     /**
      * 先享卡ID，唯一标识一个先享卡
      */
@@ -47,11 +47,11 @@ public class DiscountCardUserPaidConsumeData {
     /**
      * 商户号
      */
-    private String mchid;
+    private String mchId;
     /**
-     * 用户标识，用户在{@code appid}下的唯一标识
+     * 用户标识，用户在{@code appId}下的唯一标识
      */
-    private String openid;
+    private String openId;
     /**
      * 商户领卡号，商户在请求领卡预受理接口时传入的领卡请求号，同一个商户号下必须唯一，要求32个字符内，只能是数字、大小写字母_-|*
      */

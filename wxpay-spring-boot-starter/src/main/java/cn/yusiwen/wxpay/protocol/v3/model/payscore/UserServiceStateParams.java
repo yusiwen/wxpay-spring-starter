@@ -23,7 +23,7 @@ import lombok.Data;
 /**
  * 查询用户授权状态参数.
  * <p>
- * {@code appid} 从对应租户的配置中自动注入。
+ * {@code appId} 从对应租户的配置中自动注入。
  *
  * @author yusiwen
  * @since 1.0.0.RELEASE
@@ -35,7 +35,7 @@ public class UserServiceStateParams {
      */
     private String serviceId;
     /**
-     * 微信用户在商户对应appid下的唯一标识。
+     * 微信用户在商户对应appId下的唯一标识。
      */
     private String openId;
 

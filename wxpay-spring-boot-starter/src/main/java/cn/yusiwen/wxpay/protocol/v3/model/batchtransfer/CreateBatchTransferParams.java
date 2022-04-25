@@ -32,9 +32,9 @@ import lombok.Data;
 public class CreateBatchTransferParams {
 
     /**
-     * 直连商户的appid
+     * 直连商户的appId
      */
-    private String appid;
+    private String appId;
     /**
      * 商家批次单号
      */
@@ -82,9 +82,9 @@ public class CreateBatchTransferParams {
          */
         private String transferRemark;
         /**
-         * 用户在直连商户appid下的唯一标识
+         * 用户在直连商户appId下的唯一标识
          */
-        private String openid;
+        private String openId;
         /**
          * 收款用户姓名
          */

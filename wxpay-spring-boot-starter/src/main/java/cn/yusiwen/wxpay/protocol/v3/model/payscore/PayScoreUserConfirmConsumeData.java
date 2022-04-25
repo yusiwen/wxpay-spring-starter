@@ -34,7 +34,7 @@ public class PayScoreUserConfirmConsumeData {
     /**
      * The Appid.
      */
-    private String appid;
+    private String appId;
     /**
      * The Attach.
      */
@@ -46,11 +46,11 @@ public class PayScoreUserConfirmConsumeData {
     /**
      * The Mchid.
      */
-    private String mchid;
+    private String mchId;
     /**
      * The Openid.
      */
-    private String openid;
+    private String openId;
     /**
      * The Order id.
      */

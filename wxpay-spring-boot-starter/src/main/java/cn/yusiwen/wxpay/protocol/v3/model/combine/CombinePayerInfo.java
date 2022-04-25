@@ -29,7 +29,7 @@ import lombok.Data;
 @Data
 public class CombinePayerInfo {
     /**
-     * 使用合单appid获取的对应用户openid。是用户在商户appid下的唯一标识。
+     * 使用合单appId获取的对应用户openId。是用户在商户appId下的唯一标识。
      */
-    private String openid;
+    private String openId;
 }

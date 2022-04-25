@@ -92,7 +92,7 @@ public class WechatPartnerPayApi extends AbstractApi {
                             prepayId);
 
                     body.put("appid", subAppid);
-                    body.put("partnerid", partnerPayParams.getSubMchid());
+                    body.put("partnerid", partnerPayParams.getSubMchId());
                     body.put("prepayid", prepayId);
                     body.put("package", "Sign=WXPay");
                     body.put("nonceStr", nonceStr);
@@ -181,8 +181,8 @@ public class WechatPartnerPayApi extends AbstractApi {
 
     private RequestEntity<?> payFunction(WechatPayV3Type type, PartnerPayParams partnerPayParams) {
         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-        partnerPayParams.setSpAppid(v3.getAppId());
-        partnerPayParams.setSpMchid(v3.getMchId());
+        partnerPayParams.setSpAppId(v3.getAppId());
+        partnerPayParams.setSpMchId(v3.getMchId());
         String notifyUrl = v3.getDomain().concat(partnerPayParams.getNotifyUrl());
         partnerPayParams.setNotifyUrl(notifyUrl);
         URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build().toUri();
@@ -251,7 +251,7 @@ public class WechatPartnerPayApi extends AbstractApi {
 
         Map<String, String> queryParams = new HashMap<>(1);
         queryParams.put("sp_mchid", v3.getMchId());
-        queryParams.put("sub_mchid", closeTransParams.getSubMchid());
+        queryParams.put("sub_mchid", closeTransParams.getSubMchId());
 
         URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build()
                 .expand(closeTransParams.getOutTradeNo()).toUri();

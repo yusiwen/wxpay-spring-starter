@@ -30,11 +30,11 @@ import lombok.Data;
 public class MiniProgramsInfo {
 
     /**
-     * 商家小程序appid
+     * 商家小程序appId
      * <p>
-     * 商家小程序appid要与归属商户号有M-A or M-m-suba关系。
+     * 商家小程序appId要与归属商户号有M-A or M-m-suba关系。
      */
-    private String miniProgramsAppid;
+    private String miniProgramsAppId;
     /**
      * 商家小程序path
      */

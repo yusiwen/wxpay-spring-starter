@@ -31,13 +31,13 @@ public class Payer {
     /**
      * 用户标识
      */
-    private String openid;
+    private String openId;
     /**
      * 用户服务标识
      */
-    private String spOpenid;
+    private String spOpenId;
     /**
      * 用户子标识
      */
-    private String subOpenid;
+    private String subOpenId;
 }

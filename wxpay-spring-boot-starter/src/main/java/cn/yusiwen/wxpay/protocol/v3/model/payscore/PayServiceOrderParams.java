@@ -36,9 +36,9 @@ public class PayServiceOrderParams {
      */
     private String outOrderNo;
     /**
-     * 与传入的商户号建立了支付绑定关系的appid，必填
+     * 与传入的商户号建立了支付绑定关系的appId，必填
      */
-    private String appid;
+    private String appId;
     /**
      * 服务ID，必填
      * <p>

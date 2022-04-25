@@ -31,9 +31,9 @@ import lombok.Data;
 @Data
 public class CombineCloseParams {
     /**
-     * 合单商户appid，必填
+     * 合单商户appId，必填
      */
-    private String combineAppid;
+    private String combineAppId;
     /**
      * 合单商户订单号，必填，商户侧需要保证同一商户下唯一
      */
@@ -52,9 +52,9 @@ public class CombineCloseParams {
     @Data
     public static class ClosingSubOrder {
         /**
-         * 子单发起方商户号，必填，必须与发起方appid有绑定关系。
+         * 子单发起方商户号，必填，必须与发起方appId有绑定关系。
          */
-        private String mchid;
+        private String mchId;
 
         /**
          * 子单商户订单号，必填，商户系统内部订单号，要求32个字符内，只能是数字、大小写字母_-|*@ ，且在同一个商户号下唯一。
@@ -68,7 +68,7 @@ public class CombineCloseParams {
          * <p>
          * 直连商户不用传二级商户号。
          */
-        private String subMchid;
+        private String subMchId;
 
     }
 }

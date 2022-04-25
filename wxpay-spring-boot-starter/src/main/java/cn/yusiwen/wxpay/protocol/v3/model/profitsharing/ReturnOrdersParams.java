@@ -46,7 +46,7 @@ public class ReturnOrdersParams {
      * <p>
      * 分账回退的出资商户，只能对原分账请求中成功分给商户接收方进行回退
      */
-    private String returnMchid;
+    private String returnMchId;
     /**
      * 回退金额，必填
      * <p>

@@ -33,7 +33,7 @@ public class DirectCompleteServiceOrderParams {
     /**
      * The Appid.
      */
-    private String appid;
+    private String appId;
     /**
      * The Attach.
      */
@@ -53,7 +53,7 @@ public class DirectCompleteServiceOrderParams {
     /**
      * The Openid.
      */
-    private String openid;
+    private String openId;
     /**
      * The Out order no.
      */

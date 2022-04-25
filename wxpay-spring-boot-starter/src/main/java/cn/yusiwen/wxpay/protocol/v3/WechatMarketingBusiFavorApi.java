@@ -110,7 +110,7 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
     }
 
     /**
-     * 核销用户券API，暂时appid需要手工在参数中传递
+     * 核销用户券API，暂时appId需要手工在参数中传递
      * <p>
      * 在用户满足优惠门槛后，服务商可通过该接口核销用户微信卡包中具体某一张商家券。
      *
@@ -122,10 +122,10 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
         WechatResponseEntity<ObjectNode> wechatResponseEntity = new WechatResponseEntity<>();
         this.client().withType(WechatPayV3Type.MARKETING_BUSI_FAVOR_COUPON_USE, params).function((type, useParams) -> {
             URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build().toUri();
-            if (!StringUtils.hasText(params.getAppid())) {
+            if (!StringUtils.hasText(params.getAppId())) {
                 WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
                 String appId = v3.getAppId();
-                useParams.setAppid(appId);
+                useParams.setAppId(appId);
             }
             return post(uri, useParams);
         }).consumer(wechatResponseEntity::convert).request();
@@ -147,9 +147,9 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
                 .function((type, userBusiFavorQueryParams) -> {
                     MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<>();
 
-                    String appid = userBusiFavorQueryParams.getAppid();
-                    if (StringUtils.hasText(appid)) {
-                        queryParams.add("appid", appid);
+                    String appId = userBusiFavorQueryParams.getAppId();
+                    if (StringUtils.hasText(appId)) {
+                        queryParams.add("appid", appId);
                     }
                     queryParams.add("stock_id", userBusiFavorQueryParams.getStockId());
 
@@ -163,7 +163,7 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
                     queryParams.add("limit", String.valueOf(params.getLimit()));
 
                     URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).queryParams(queryParams)
-                            .build().expand(userBusiFavorQueryParams.getOpenid()).toUri();
+                            .build().expand(userBusiFavorQueryParams.getOpenId()).toUri();
                     return get(uri);
                 }).consumer(wechatResponseEntity::convert).request();
         return wechatResponseEntity;
@@ -182,14 +182,14 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
         WechatResponseEntity<ObjectNode> wechatResponseEntity = new WechatResponseEntity<>();
         this.client().withType(WechatPayV3Type.MARKETING_BUSI_FAVOR_USER_COUPON, params)
                 .function((type, queryParams) -> {
-                    if (!StringUtils.hasText(params.getAppid())) {
+                    if (!StringUtils.hasText(params.getAppId())) {
                         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
                         String appId = v3.getAppId();
-                        queryParams.setAppid(appId);
+                        queryParams.setAppId(appId);
                     }
 
                     URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build()
-                            .expand(queryParams.getOpenid(), queryParams.getCouponCode(), queryParams.getAppid())
+                            .expand(queryParams.getOpenId(), queryParams.getCouponCode(), queryParams.getAppId())
                             .toUri();
                     return get(uri);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -232,7 +232,7 @@ public class WechatMarketingBusiFavorApi extends AbstractApi {
      * <ul>
      * <li>仅可以收到由商户自己创建的批次相关的通知</li>
      * <li>需要设置apiv3秘钥，否则无法收到回调。</li>
-     * <li>如果需要领券回调中的参数openid。需要创券时候传入 notify_appid参数。</li>
+     * <li>如果需要领券回调中的参数openId。需要创券时候传入 notify_appid参数。</li>
      * </ul>
      *
      * @param params

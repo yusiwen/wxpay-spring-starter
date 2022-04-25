@@ -32,14 +32,14 @@ import lombok.Data;
  * @since 1.0.0.RELEASE
  */
 @Data
-public class ProfitsharingConsumeData {
+public class ProfitSharingConsumeData {
 
     /**
      * 直连商户号.
      * <p>
      * 直连模式分账发起和出资商户
      */
-    private String mchid;
+    private String mchId;
 
     /**
      * 微信订单号.

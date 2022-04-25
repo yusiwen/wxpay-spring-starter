@@ -32,14 +32,14 @@ public class Receiver {
     /**
      * 分账接收方类型.
      * <p>
-     * MERCHANT_ID：商户号（mch_id或者sub_mch_id） PERSONAL_OPENID：个人openid
+     * MERCHANT_ID：商户号（mch_id或者sub_mch_id） PERSONAL_OPENID：个人openId
      */
     private Type type;
 
     /**
      * 分账接收方帐号.
      * <p>
-     * 类型是MERCHANT_ID时，是商户号（mch_id或者sub_mch_id） 类型是PERSONAL_OPENID时，是个人openid
+     * 类型是MERCHANT_ID时，是商户号（mch_id或者sub_mch_id） 类型是PERSONAL_OPENID时，是个人openId
      */
     private String account;
 

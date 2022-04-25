@@ -53,14 +53,14 @@ public class BusiFavorReceiveConsumeData {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssXXX", timezone = "GMT+8")
     private LocalDateTime sendTime;
     /**
-     * 微信用户在appid下的唯一标识。
+     * 微信用户在appId下的唯一标识。
      */
-    private String openid;
+    private String openId;
     /**
      * 微信用户在同一个微信开放平台账号下的唯一用户标识， unionid获取方式请参见 <a target= "_blank" href=
      * "https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/union-id.html">《UnionID机制说明》</a> 文档。
      */
-    private String unionid;
+    private String unionId;
     /**
      * 发券商户号
      */

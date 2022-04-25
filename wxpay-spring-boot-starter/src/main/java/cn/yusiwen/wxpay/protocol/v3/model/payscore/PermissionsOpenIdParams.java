@@ -23,9 +23,9 @@ import lombok.Data;
 /**
  * 适用于以下API:
  * <p>
- * 查询与用户授权记录（openid）API
+ * 查询与用户授权记录（openId）API
  * <p>
- * 解除用户授权关系（openid）API
+ * 解除用户授权关系（openId）API
  *
  * @author yusiwen
  * @since 1.0.0.RELEASE
@@ -33,13 +33,13 @@ import lombok.Data;
 @Data
 public class PermissionsOpenIdParams {
     /**
-     * openid，必填
+     * openId，必填
      */
-    private String openid;
+    private String openId;
     /**
-     * 仅仅适用于解除用户授权关系（openid）API
+     * 仅仅适用于解除用户授权关系（openId）API
      */
-    private String appid;
+    private String appId;
     /**
      * 服务ID，必填
      * <p>
@@ -47,7 +47,7 @@ public class PermissionsOpenIdParams {
      */
     private String serviceId;
     /**
-     * 仅仅适用于解除用户授权关系（openid）API
+     * 仅仅适用于解除用户授权关系（openId）API
      */
     private String reason;
 }

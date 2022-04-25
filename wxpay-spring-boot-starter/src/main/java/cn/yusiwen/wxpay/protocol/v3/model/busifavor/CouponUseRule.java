@@ -47,15 +47,15 @@ public class CouponUseRule {
      */
     private CouponAvailableTime couponAvailableTime;
     /**
-     * 核销小程序appid
+     * 核销小程序appId
      *
      * @see BusiFavorUseMethod#MINI_PROGRAMS
      */
-    private String miniProgramsAppid;
+    private String miniProgramsAppId;
     /**
      * 核销小程序path
      *
-     * @see #miniProgramsAppid
+     * @see #miniProgramsAppId
      */
     private String miniProgramsPath;
     /**

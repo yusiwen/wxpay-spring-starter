@@ -33,10 +33,10 @@ public class PayParams extends AbstractPayParams {
     /**
      * The Appid.
      */
-    private String appid;
+    private String appId;
     /**
      * The Mchid.
      */
-    private String mchid;
+    private String mchId;
 
 }

@@ -37,7 +37,7 @@ public class RefundConsumeData {
     /**
      * 直连商户号
      */
-    private String mchid;
+    private String mchId;
     /**
      * 商户订单号
      */

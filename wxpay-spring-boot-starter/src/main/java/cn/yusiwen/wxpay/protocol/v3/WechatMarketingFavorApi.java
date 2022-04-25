@@ -131,9 +131,9 @@ public class WechatMarketingFavorApi extends AbstractApi {
      * <p>
      * 商户侧开发时建议增加发放流水记录。
      * <p>
-     * 微信支付文档所要求的微信公众号服务号不是必须的，只要你有一个绑定了微信支付商户平台和开放平台的appid即可。
+     * 微信支付文档所要求的微信公众号服务号不是必须的，只要你有一个绑定了微信支付商户平台和开放平台的appId即可。
      * <p>
-     * 流程为： 1. appid 请求授权微信登录。 2. 登录成功后，开发者在商户侧保存用户 <strong>对应此appid的openid</strong>。 3. 通过 appid - openid 进行发券。
+     * 流程为： 1. appId 请求授权微信登录。 2. 登录成功后，开发者在商户侧保存用户 <strong>对应此appId的openId</strong>。 3. 通过 appId - openId 进行发券。
      * <p>
      * 商户平台/API完成制券后，可使用发放代金券接口发券。通过调用此接口可发放指定批次给指定用户，发券场景可以是小程序、H5、APP等。
      * <p>
@@ -162,11 +162,11 @@ public class WechatMarketingFavorApi extends AbstractApi {
     private RequestEntity<?> sendStocksFunction(WechatPayV3Type type, StocksSendParams params) {
         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
 
-        params.setAppid(v3.getAppId());
+        params.setAppId(v3.getAppId());
         params.setStockCreatorMchid(v3.getMchId());
-        URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build().expand(params.getOpenid())
+        URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build().expand(params.getOpenId())
                 .toUri();
-        params.setOpenid(null);
+        params.setOpenId(null);
         return post(uri, params);
     }
 
@@ -632,9 +632,9 @@ public class WechatMarketingFavorApi extends AbstractApi {
             URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build()
                     .expand(sendParams.getCardId()).toUri();
             sendParams.setCardId(null);
-            if (!StringUtils.hasText(sendParams.getAppid())) {
+            if (!StringUtils.hasText(sendParams.getAppId())) {
                 WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                sendParams.setAppid(v3.getAppId());
+                sendParams.setAppId(v3.getAppId());
             }
             return post(uri, sendParams);
         }).consumer(wechatResponseEntity::convert).request();

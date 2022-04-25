@@ -100,7 +100,7 @@ public class WechatAllocationApi {
         model.setReceivers(MAPPER.writeValueAsString(receivers));
 
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        model.setAppid(v3.getAppId());
+        model.setAppId(v3.getAppId());
         model.setMchId(v3.getMchId());
 
         model.setTransactionId(profitSharingModel.getTransactionId());
@@ -126,7 +126,7 @@ public class WechatAllocationApi {
         multiProfitSharingSModel.setReceivers(MAPPER.writeValueAsString(receivers));
 
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        multiProfitSharingSModel.setAppid(v3.getAppId());
+        multiProfitSharingSModel.setAppId(v3.getAppId());
         multiProfitSharingSModel.setMchId(v3.getMchId());
 
         multiProfitSharingSModel.setTransactionId(multiProfitSharingModel.getTransactionId());
@@ -168,7 +168,7 @@ public class WechatAllocationApi {
         profitSharingAddReceiverSModel.setReceiver(MAPPER.writeValueAsString(receiver));
 
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        profitSharingAddReceiverSModel.setAppid(v3.getAppId());
+        profitSharingAddReceiverSModel.setAppId(v3.getAppId());
         profitSharingAddReceiverSModel.setMchId(v3.getMchId());
 
         profitSharingAddReceiverSModel.certPath(v3.getCertPath());
@@ -191,7 +191,7 @@ public class WechatAllocationApi {
         profitSharingRemoveReceiverSModel.setReceiver(MAPPER.writeValueAsString(receiver));
 
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        profitSharingRemoveReceiverSModel.setAppid(v3.getAppId());
+        profitSharingRemoveReceiverSModel.setAppId(v3.getAppId());
         profitSharingRemoveReceiverSModel.setMchId(v3.getMchId());
 
         profitSharingRemoveReceiverSModel.certPath(v3.getCertPath());
@@ -209,7 +209,7 @@ public class WechatAllocationApi {
      */
     public JsonNode profitSharingFinish(ProfitSharingFinishModel profitSharingFinishModel) {
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        profitSharingFinishModel.setAppid(v3.getAppId());
+        profitSharingFinishModel.setAppId(v3.getAppId());
         profitSharingFinishModel.setMchId(v3.getMchId());
         profitSharingFinishModel.certPath(v3.getCertPath());
         profitSharingFinishModel.signType(BaseModel.HMAC_SHA256);
@@ -243,7 +243,7 @@ public class WechatAllocationApi {
      */
     public JsonNode profitSharingReturn(ProfitSharingReturnModel profitSharingReturnModel) {
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        profitSharingReturnModel.setAppid(v3.getAppId());
+        profitSharingReturnModel.setAppId(v3.getAppId());
         profitSharingReturnModel.setMchId(v3.getMchId());
         profitSharingReturnModel.certPath(v3.getCertPath());
         profitSharingReturnModel.signType(BaseModel.HMAC_SHA256);
@@ -260,7 +260,7 @@ public class WechatAllocationApi {
      */
     public JsonNode profitSharingReturnQuery(ProfitSharingReturnQueryModel profitSharingReturnQueryModel) {
         WechatPayProperties.V3 v3 = wechatV2Client.getWechatMetaBean().getV3();
-        profitSharingReturnQueryModel.setAppid(v3.getAppId());
+        profitSharingReturnQueryModel.setAppId(v3.getAppId());
         profitSharingReturnQueryModel.setMchId(v3.getMchId());
         profitSharingReturnQueryModel.certPath(v3.getCertPath());
         profitSharingReturnQueryModel.signType(BaseModel.HMAC_SHA256);

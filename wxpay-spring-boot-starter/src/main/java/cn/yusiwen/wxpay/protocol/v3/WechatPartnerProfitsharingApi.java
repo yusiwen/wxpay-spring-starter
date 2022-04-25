@@ -90,7 +90,7 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
                     X509WechatCertificateInfo certificate = signatureProvider
                             .getCertificate(this.wechatMetaBean().getTenantId());
                     final X509Certificate x509Certificate = certificate.getX509Certificate();
-                    params.setAppid(v3.getAppId());
+                    params.setAppId(v3.getAppId());
                     List<Receiver> receivers = params.getReceivers();
                     if (!CollectionUtils.isEmpty(receivers)) {
                         List<Receiver> encrypted = receivers.stream().peek(receiversItem -> {
@@ -130,8 +130,8 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
                 .function((wechatPayV3Type, params) -> {
                     MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<>();
                     queryParams.add("transaction_id", params.getTransactionId());
-                    Optional.ofNullable(params.getSubMchid())
-                            .ifPresent(mchId -> queryParams.add("sub_mchid", params.getSubMchid()));
+                    Optional.ofNullable(params.getSubMchId())
+                            .ifPresent(mchId -> queryParams.add("sub_mchid", params.getSubMchId()));
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA))
                             .queryParams(queryParams).build().expand(params.getOutOrderNo()).toUri();
                     return get(uri);
@@ -188,8 +188,8 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
                 .function((wechatPayV3Type, params) -> {
                     MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<>();
                     queryParams.add("out_order_no", params.getOutOrderNo());
-                    Optional.ofNullable(params.getSubMchid())
-                            .ifPresent(mchId -> queryParams.add("sub_mchid", params.getSubMchid()));
+                    Optional.ofNullable(params.getSubMchId())
+                            .ifPresent(mchId -> queryParams.add("sub_mchid", params.getSubMchId()));
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA))
                             .queryParams(queryParams).build().expand(params.getOutReturnNo()).toUri();
                     return get(uri);
@@ -248,13 +248,13 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
      * <p>
      * 可调用此接口查询订单剩余待分金额
      *
-     * @param subMchid
-     *            the sub mchid
+     * @param subMchId
+     *            the sub merchant ID
      * @return the wechat response entity
      */
-    public WechatResponseEntity<ObjectNode> queryMchConfigs(String subMchid) {
+    public WechatResponseEntity<ObjectNode> queryMchConfigs(String subMchId) {
         WechatResponseEntity<ObjectNode> wechatResponseEntity = new WechatResponseEntity<>();
-        this.client().withType(WechatPayV3Type.PROFITSHARING_MCH_CONFIG, subMchid).function((wechatPayV3Type, id) -> {
+        this.client().withType(WechatPayV3Type.PROFITSHARING_MCH_CONFIG, subMchId).function((wechatPayV3Type, id) -> {
 
             URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build().expand(id)
                     .toUri();
@@ -281,7 +281,7 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
                     X509WechatCertificateInfo certificate = signatureProvider
                             .getCertificate(this.wechatMetaBean().getTenantId());
                     final X509Certificate x509Certificate = certificate.getX509Certificate();
-                    params.setAppid(v3.getAppId());
+                    params.setAppId(v3.getAppId());
                     String name = params.getName();
                     if (StringUtils.hasText(name)) {
                         String encryptedName = signatureProvider.encryptRequestMessage(name, x509Certificate);
@@ -309,7 +309,7 @@ public class WechatPartnerProfitsharingApi extends AbstractApi {
         this.client().withType(WechatPayV3Type.PROFITSHARING_RECEIVERS_DELETE, delReceiversParams)
                 .function((wechatPayV3Type, params) -> {
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    params.setAppid(v3.getAppId());
+                    params.setAppId(v3.getAppId());
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build().toUri();
                     return post(uri, params);
                 }).consumer(wechatResponseEntity::convert).request();

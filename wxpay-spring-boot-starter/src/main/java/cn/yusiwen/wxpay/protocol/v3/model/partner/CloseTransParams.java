@@ -32,7 +32,7 @@ public class CloseTransParams {
     /**
      * 子商户号
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 商户订单号
      */

@@ -35,9 +35,9 @@ import cn.yusiwen.wxpay.protocol.enumeration.CountType;
 public class DiscountCardAcceptedConsumeData {
 
     /**
-     * 应用appid需要绑定微信商户平台
+     * 应用appId需要绑定微信商户平台
      */
-    private String appid;
+    private String appId;
     /**
      * 先享卡ID，唯一标识一个先享卡
      */
@@ -53,15 +53,15 @@ public class DiscountCardAcceptedConsumeData {
     /**
      * 商户号
      */
-    private String mchid;
+    private String mchId;
     /**
      * 用户先享卡目标列表
      */
     private List<Objective> objectives;
     /**
-     * 用户标识，用户在{@code appid}下的唯一标识
+     * 用户标识，用户在{@code appId}下的唯一标识
      */
-    private String openid;
+    private String openId;
     /**
      * 商户领卡号，商户在请求领卡预受理接口时传入的领卡请求号，同一个商户号下必须唯一，要求32个字符内，只能是数字、大小写字母_-|*
      */
@@ -73,9 +73,9 @@ public class DiscountCardAcceptedConsumeData {
     /**
      * 邀请者用户标识
      * <p>
-     * 微信用户在商户对应appid下的唯一标识。 仅当此卡是通过“邀请有礼”渠道领卡时，会返回此字段；指此先享卡是通过此[邀请者]邀请领卡成功的。当此先享卡完成约定时，商户可给此[邀请者]下发应邀请有礼的奖励
+     * 微信用户在商户对应appId下的唯一标识。 仅当此卡是通过“邀请有礼”渠道领卡时，会返回此字段；指此先享卡是通过此[邀请者]邀请领卡成功的。当此先享卡完成约定时，商户可给此[邀请者]下发应邀请有礼的奖励
      */
-    private String sharerOpenid;
+    private String sharerOpenId;
     /**
      * 先享卡的守约状态
      */
@@ -175,7 +175,7 @@ public class DiscountCardAcceptedConsumeData {
         /**
          * 开始时间
          */
-        private String betinTime;
+        private String beginTime;
         /**
          * 结束时间
          */

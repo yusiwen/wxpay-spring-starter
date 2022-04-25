@@ -32,7 +32,7 @@ public class BusiFavorCallbackSettingParams {
     /**
      * 微信支付商户的商户号，由微信支付生成并下发，不填默认查询调用方商户的通知URL。
      */
-    private String mchid;
+    private String mchId;
     /**
      * 商户提供的用于接收商家券事件通知的url地址，必须支持https。
      */

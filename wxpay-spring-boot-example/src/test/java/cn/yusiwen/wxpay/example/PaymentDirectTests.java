@@ -67,7 +67,7 @@ public class PaymentDirectTests {
         signer.initSign(wechatMetaBean.getKeyPair().getPrivate());
 
         long timestamp = System.currentTimeMillis() / 1000;
-        System.out.println("appid = wx55a75a13fd5d3b78");
+        System.out.println("appId = wx55a75a13fd5d3b78");
         System.out.println("timestamp = " + timestamp);
         IdGenerator ID_GENERATOR = new AlternativeJdkIdGenerator();
         String nonceStr = ID_GENERATOR.generateId()
@@ -124,9 +124,9 @@ public class PaymentDirectTests {
         Amount amount = new Amount();
         amount.setTotal(100);
         payParams.setAmount(amount);
-        // 此类支付  Payer 必传  且openid需要同appid有绑定关系 具体去看文档
+        // 此类支付  Payer 必传  且openId需要同appId有绑定关系 具体去看文档
         Payer payer = new Payer();
-        payer.setOpenid("ooadI5kQYrrCqpgbisvC8bEw_oUc");
+        payer.setOpenId("ooadI5kQYrrCqpgbisvC8bEw_oUc");
         payParams.setPayer(payer);
 
         WechatResponseEntity<ObjectNode> responseEntity = wechatApiProvider.directPayApi(tenantId).jsPay(payParams);

@@ -37,14 +37,14 @@ import cn.yusiwen.wxpay.protocol.v3.model.SceneInfo;
 public class CombineTransactionConsumeData {
 
     /**
-     * 合单商户appid，即合单发起方的appid
+     * 合单商户appId，即合单发起方的appId
      */
-    private String combineAppid;
+    private String combineAppId;
 
     /**
      * 合单商户号.
      */
-    private String combineMchid;
+    private String combineMchId;
 
     /**
      * 合单商户订单号.
@@ -92,9 +92,9 @@ public class CombineTransactionConsumeData {
         private String bankType;
 
         /**
-         * 子单发起方商户号，必须与发起方Appid有绑定关系。（即电商平台mchid）
+         * 子单发起方商户号，必须与发起方Appid有绑定关系。（即电商平台mchId）
          */
-        private String mchid;
+        private String mchId;
 
         /**
          * 子单商户侧订单号
@@ -104,7 +104,7 @@ public class CombineTransactionConsumeData {
         /**
          * 二级商户商户号，由微信支付生成并下发。 服务商子商户的商户号，被合单方。直连商户不用传二级商户号。
          */
-        private String subMchid;
+        private String subMchId;
 
         /**
          * 支付完成时间

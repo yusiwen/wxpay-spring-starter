@@ -34,17 +34,17 @@ public class PartnerAddReceiversParams {
     /**
      * 子商户号，选填
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 应用ID，自动注入
      */
-    private String appid;
+    private String appId;
     /**
      * 子商户应用ID，选填
      * <p>
      * 分账接收方类型包含{@code PERSONAL_SUB_OPENID}时必填
      */
-    private String subAppid;
+    private String subAppId;
     /**
      * 分账接收方类型，必填
      */

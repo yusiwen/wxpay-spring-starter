@@ -109,7 +109,7 @@ public class WechatPayScoreApi extends AbstractApi {
                 .function((wechatPayV3Type, orderParams) -> {
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
 
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setNotifyUrl(v3.getDomain().concat(orderParams.getNotifyUrl()));
 
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build().toUri();
@@ -175,7 +175,7 @@ public class WechatPayScoreApi extends AbstractApi {
                             .expand(orderParams.getOutOrderNo()).toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setOutOrderNo(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -204,7 +204,7 @@ public class WechatPayScoreApi extends AbstractApi {
                             .expand(orderParams.getOutOrderNo()).toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setOutOrderNo(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -232,7 +232,7 @@ public class WechatPayScoreApi extends AbstractApi {
                             .expand(orderParams.getOutOrderNo()).toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setOutOrderNo(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -260,7 +260,7 @@ public class WechatPayScoreApi extends AbstractApi {
                             .expand(orderParams.getOutOrderNo()).toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setOutOrderNo(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -286,7 +286,7 @@ public class WechatPayScoreApi extends AbstractApi {
                             .expand(orderParams.getOutOrderNo()).toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     orderParams.setOutOrderNo(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
@@ -315,7 +315,7 @@ public class WechatPayScoreApi extends AbstractApi {
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build().toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     String notifyUrl = orderParams.getNotifyUrl();
                     if (StringUtils.hasText(notifyUrl)) {
                         orderParams.setNotifyUrl(v3.getDomain().concat(notifyUrl));
@@ -340,7 +340,7 @@ public class WechatPayScoreApi extends AbstractApi {
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
                     String notifyUrl = orderParams.getNotifyUrl();
-                    orderParams.setAppid(v3.getAppId());
+                    orderParams.setAppId(v3.getAppId());
                     if (StringUtils.hasText(notifyUrl)) {
                         orderParams.setNotifyUrl(v3.getDomain().concat(notifyUrl));
                     }
@@ -393,7 +393,7 @@ public class WechatPayScoreApi extends AbstractApi {
     }
 
     /**
-     * 查询与用户授权记录（openid）API
+     * 查询与用户授权记录（openId）API
      *
      * @param params
      *            the params
@@ -406,14 +406,14 @@ public class WechatPayScoreApi extends AbstractApi {
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA))
                             .queryParam("appid", v3.getAppId()).queryParam("service_id", orderParams.getServiceId())
-                            .build().expand(orderParams.getOpenid()).toUri();
+                            .build().expand(orderParams.getOpenId()).toUri();
                     return get(uri);
                 }).consumer(wechatResponseEntity::convert).request();
         return wechatResponseEntity;
     }
 
     /**
-     * 解除用户授权关系（openid）API
+     * 解除用户授权关系（openId）API
      *
      * @param params
      *            the params
@@ -425,10 +425,10 @@ public class WechatPayScoreApi extends AbstractApi {
                 .function((wechatPayV3Type, orderParams) -> {
 
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build()
-                            .expand(orderParams.getOpenid()).toUri();
+                            .expand(orderParams.getOpenId()).toUri();
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    orderParams.setAppid(v3.getAppId());
-                    orderParams.setOpenid(null);
+                    orderParams.setAppId(v3.getAppId());
+                    orderParams.setOpenId(null);
                     return post(uri, orderParams);
                 }).consumer(wechatResponseEntity::convert).request();
         return wechatResponseEntity;

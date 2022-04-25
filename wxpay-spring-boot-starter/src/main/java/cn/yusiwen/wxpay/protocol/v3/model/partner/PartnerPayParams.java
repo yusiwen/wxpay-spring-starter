@@ -34,18 +34,18 @@ public class PartnerPayParams extends AbstractPayParams {
     /**
      * 服务商公众号ID
      */
-    private String spAppid;
+    private String spAppId;
     /**
      * 服务商户号
      */
-    private String spMchid;
+    private String spMchId;
     /**
-     * 子商户appid.
+     * 子商户appId.
      */
     private String subAppid;
     /**
      * 子商户号
      */
-    private String subMchid;
+    private String subMchId;
 
 }

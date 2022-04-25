@@ -33,7 +33,7 @@ public enum BusiFavorUseMethod {
      */
     OFF_LINE,
     /**
-     * 线上小程序核销，点击券“立即使用”跳转至配置的商家小程序（需要添加小程序appid和path）。
+     * 线上小程序核销，点击券“立即使用”跳转至配置的商家小程序（需要添加小程序appId和path）。
      *
      * @since 1.0.0.RELEASE
      */

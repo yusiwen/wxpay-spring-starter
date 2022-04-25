@@ -134,12 +134,12 @@ class PaymentFavorTests {
      * <p>
      * 商户侧开发时建议增加发放流水记录。
      * <p>
-     * 微信支付文档所要求的微信公众号服务号不是必须的，只要你有一个绑定了微信支付商户平台和开放平台的appid即可。
+     * 微信支付文档所要求的微信公众号服务号不是必须的，只要你有一个绑定了微信支付商户平台和开放平台的appId即可。
      * <p>
      * 流程为：
-     * 1. appid 请求授权微信登录。
-     * 2. 登录成功后，开发者在商户侧保存用户 <strong>对应此appid的openid</strong>。
-     * 3. 通过 appid - openid 进行发券。
+     * 1. appId 请求授权微信登录。
+     * 2. 登录成功后，开发者在商户侧保存用户 <strong>对应此appId的openId</strong>。
+     * 3. 通过 appId - openId 进行发券。
      */
     @Test
     public void sendStock() {
@@ -148,8 +148,8 @@ class PaymentFavorTests {
         // 发券只需要传递以下三个参数
         // 批次id
         params.setStockId("15347538");
-        // 用户对应 wechat.pay.v3.<tenantId>.app-id 的 openid
-        params.setOpenid("ooadI5kQYrrCqpgbisvC8bEw_oUc");
+        // 用户对应 wechat.pay.v3.<tenantId>.app-id 的 openId
+        params.setOpenId("ooadI5kQYrrCqpgbisvC8bEw_oUc");
         // 商户侧保证唯一的流水号
         params.setOutRequestNo("D12456202012161641219x");
         // 指定面额发券，面额  注意场景   选填
@@ -220,7 +220,7 @@ class PaymentFavorTests {
         CouponDetailsQueryParams params = new CouponDetailsQueryParams();
         params.setCouponId("12646688788");
         params.setOpenId("omDFY5rnZd2_0f-pMWJs2A3zd57c");
-        // appid 自动注入 注意  appid 和 openid 要对应
+        // appId 自动注入 注意  appId 和 openId 要对应
         WechatResponseEntity<ObjectNode> responseEntity = wechatApiProvider.favorApi(tenantId).queryCouponDetails(params);
         Assertions.assertThat(responseEntity).isNotNull();
     }
@@ -274,7 +274,7 @@ class PaymentFavorTests {
 
         UserCouponsQueryParams params = new UserCouponsQueryParams();
         params.setOpenId("omDFY5rnZd2_0f-pMWJs2A3zd57c");
-        // appid 自动注入 注意  appid 和 openid 要对应
+        // appId 自动注入 注意  appId 和 openId 要对应
         // 其它参数参考文档
         WechatResponseEntity<ObjectNode> responseEntity = wechatApiProvider.favorApi(tenantId).queryUserCouponsByMchId(params);
         Assertions.assertThat(responseEntity).isNotNull();

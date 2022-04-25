@@ -65,7 +65,7 @@ public class WechatDiscountCardApi extends AbstractApi {
                     URI uri = UriComponentsBuilder.fromHttpUrl(wechatPayV3Type.uri(WeChatServer.CHINA)).build().toUri();
 
                     WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
-                    requestParams.setAppid(v3.getAppId());
+                    requestParams.setAppId(v3.getAppId());
                     requestParams.setNotifyUrl(v3.getDomain().concat(requestParams.getNotifyUrl()));
                     return post(uri, requestParams);
                 }).consumer(wechatResponseEntity::convert).request();

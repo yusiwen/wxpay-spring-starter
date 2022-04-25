@@ -38,9 +38,9 @@ public class UserServiceOrderParams {
      */
     private String outOrderNo;
     /**
-     * 与传入的商户号建立了支付绑定关系的appid，必填
+     * 与传入的商户号建立了支付绑定关系的appId，必填
      */
-    private String appid;
+    private String appId;
     /**
      * 服务ID，必填
      * <p>
@@ -84,11 +84,11 @@ public class UserServiceOrderParams {
      */
     private String notifyUrl;
     /**
-     * 微信用户在商户对应appid下的唯一标识，条件选填
+     * 微信用户在商户对应appId下的唯一标识，条件选填
      * <p>
      * 免确认订单：必填 需确认订单：不填
      */
-    private String openid;
+    private String openId;
     /**
      * 是否需要用户确认，选填
      * <p>

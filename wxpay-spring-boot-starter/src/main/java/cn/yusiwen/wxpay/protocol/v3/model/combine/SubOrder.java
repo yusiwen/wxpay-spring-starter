@@ -46,9 +46,9 @@ public class SubOrder {
     private String description;
 
     /**
-     * 子单发起方商户号，必填，必须与发起方appid有绑定关系。
+     * 子单发起方商户号，必填，必须与发起方appId有绑定关系。
      */
-    private String mchid;
+    private String mchId;
 
     /**
      * 子单商户订单号，必填，商户系统内部订单号，要求32个字符内，只能是数字、大小写字母_-|*@ ，且在同一个商户号下唯一。
@@ -62,7 +62,7 @@ public class SubOrder {
      * <p>
      * 直连商户不用传二级商户号。
      */
-    private String subMchid;
+    private String subMchId;
 
     /**
      * 结算信息，选填

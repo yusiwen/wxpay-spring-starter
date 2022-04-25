@@ -185,13 +185,13 @@ public enum WechatPayV3Type {
     PAY_SCORE_TERMINATE_PERMISSIONS_AUTH_CODE(HttpMethod.POST,
             "%s/v3/payscore/permissions/authorization-code/{authorization_code}/terminate"),
     /**
-     * 查询与用户授权记录（openid）API.
+     * 查询与用户授权记录（openId）API.
      *
      * @since 1.0.0.RELEASE
      */
     PAY_SCORE_PERMISSIONS_OPENID(HttpMethod.GET, "%s/v3/payscore/permissions/openid/{openid}"),
     /**
-     * 解除用户授权关系（openid）API.
+     * 解除用户授权关系（openId）API.
      *
      * @since 1.0.0.RELEASE
      */

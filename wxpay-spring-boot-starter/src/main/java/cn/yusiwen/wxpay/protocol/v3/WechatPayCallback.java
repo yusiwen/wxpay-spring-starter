@@ -38,7 +38,6 @@ import org.springframework.util.Assert;
 import cn.yusiwen.wxpay.PayException;
 import cn.yusiwen.wxpay.protocol.v3.model.CallbackParams;
 import cn.yusiwen.wxpay.protocol.v3.model.CouponConsumeData;
-import cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData;
 import cn.yusiwen.wxpay.protocol.v3.model.RefundConsumeData;
 import cn.yusiwen.wxpay.protocol.v3.model.ResponseSignVerifyParams;
 import cn.yusiwen.wxpay.protocol.v3.model.TransactionConsumeData;
@@ -52,7 +51,7 @@ import cn.yusiwen.wxpay.protocol.v3.model.payscore.PayScoreConsumer;
 import cn.yusiwen.wxpay.protocol.v3.model.payscore.PayScoreUserConfirmConsumeData;
 import cn.yusiwen.wxpay.protocol.v3.model.payscore.PayScoreUserPaidConsumeData;
 import cn.yusiwen.wxpay.protocol.v3.model.payscore.PayScoreUserPermissionConsumeData;
-import cn.yusiwen.wxpay.protocol.v3.model.profitsharing.ProfitsharingConsumeData;
+import cn.yusiwen.wxpay.protocol.v3.model.profitsharing.ProfitSharingConsumeData;
 
 /**
  * 微信支付回调工具.
@@ -113,9 +112,9 @@ public class WechatPayCallback {
      */
     @SneakyThrows
     public Map<String, String> profitSharingCallback(ResponseSignVerifyParams params,
-            Consumer<ProfitSharingConsumeData> consumeDataConsumer) {
+            Consumer<cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData> consumeDataConsumer) {
         String data = this.callback(params, EventType.TRANSACTION);
-        ProfitSharingConsumeData consumeData = MAPPER.readValue(data, ProfitSharingConsumeData.class);
+        cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData consumeData = MAPPER.readValue(data, cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData.class);
         consumeDataConsumer.accept(consumeData);
         return response();
 
@@ -372,9 +371,9 @@ public class WechatPayCallback {
      */
     @SneakyThrows
     public Map<String, String> profitsharingCallback(ResponseSignVerifyParams params,
-            Consumer<ProfitsharingConsumeData> profitsharingConsumeDataConsumer) {
+            Consumer<ProfitSharingConsumeData> profitsharingConsumeDataConsumer) {
         String callback = this.callback(params, EventType.TRANSACTION);
-        ProfitsharingConsumeData consumeData = MAPPER.readValue(callback, ProfitsharingConsumeData.class);
+        ProfitSharingConsumeData consumeData = MAPPER.readValue(callback, ProfitSharingConsumeData.class);
         profitsharingConsumeDataConsumer.accept(consumeData);
         return response();
     }

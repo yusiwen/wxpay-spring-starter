@@ -32,7 +32,7 @@ public class PartnerUnfreezeParams {
     /**
      * 子商户号，选填
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 微信订单号，必填
      */

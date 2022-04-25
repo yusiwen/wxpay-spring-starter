@@ -40,7 +40,7 @@ public class DiscountCardPreRequestParams {
     /**
      * APPID，必传，自动从配置中注入
      */
-    private String appid;
+    private String appId;
     /**
      * 通知商户URL，必传
      */

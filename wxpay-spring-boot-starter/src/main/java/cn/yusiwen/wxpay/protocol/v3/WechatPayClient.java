@@ -378,10 +378,8 @@ public class WechatPayClient {
         DefaultResponseErrorHandler errorHandler = new WechatPayResponseErrorHandler();
         restTemplate.setErrorHandler(errorHandler);
         List<HttpMessageConverter<?>> messageConverters = restTemplate.getMessageConverters();
-        messageConverters.removeIf(
-                httpMessageConverter -> httpMessageConverter instanceof MappingJackson2XmlHttpMessageConverter);
-        messageConverters.removeIf(
-                httpMessageConverter -> httpMessageConverter instanceof AllEncompassingFormHttpMessageConverter);
+        messageConverters.removeIf(MappingJackson2XmlHttpMessageConverter.class::isInstance);
+        messageConverters.removeIf(AllEncompassingFormHttpMessageConverter.class::isInstance);
         messageConverters.add(new ExtensionFormHttpMessageConverter());
         restTemplate.setMessageConverters(messageConverters);
         this.restOperations = restTemplate;

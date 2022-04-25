@@ -35,13 +35,13 @@ import lombok.Data;
 public class CombineH5PayParams {
 
     /**
-     * 合单商户appid，必填
+     * 合单商户appId，必填
      */
-    private String combineAppid;
+    private String combineAppId;
     /**
      * 合单商户号，必填
      */
-    private String combineMchid;
+    private String combineMchId;
     /**
      * 合单商户订单号，必填，商户侧需要保证同一商户下唯一
      */

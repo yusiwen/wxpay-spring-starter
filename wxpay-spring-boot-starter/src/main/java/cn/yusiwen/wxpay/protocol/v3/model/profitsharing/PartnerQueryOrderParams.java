@@ -32,7 +32,7 @@ public class PartnerQueryOrderParams {
     /**
      * 子商户号，选填
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 商户分账单号，必填
      */

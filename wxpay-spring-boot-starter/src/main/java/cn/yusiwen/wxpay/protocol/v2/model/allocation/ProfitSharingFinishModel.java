@@ -45,7 +45,7 @@ public class ProfitSharingFinishModel extends BaseModel {
      * <p>
      * 微信分配的公众账号ID
      */
-    private String appid;
+    private String appId;
 
     /**
      * 微信订单号.

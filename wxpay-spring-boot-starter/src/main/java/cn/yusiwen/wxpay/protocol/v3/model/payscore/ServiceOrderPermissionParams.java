@@ -36,7 +36,7 @@ public class ServiceOrderPermissionParams {
     /**
      * 服务商申请的公众号或移动应用APPID，必填
      */
-    private String appid;
+    private String appId;
     /**
      * 授权协议号，必填
      * <p>

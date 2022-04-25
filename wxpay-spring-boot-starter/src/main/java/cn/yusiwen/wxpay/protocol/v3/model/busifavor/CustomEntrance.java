@@ -48,11 +48,11 @@ public class CustomEntrance {
      */
     private MiniProgramsInfo miniProgramsInfo;
     /**
-     * 商户公众号appid
+     * 商户公众号appId
      * <p>
      * 从券详情可跳转至公众号
      */
-    private String appid;
+    private String appId;
     /**
      * code展示模式
      */

@@ -32,7 +32,7 @@ public class PartnerQueryReturnOrderParams {
     /**
      * 子商户号，选填
      */
-    private String subMchid;
+    private String subMchId;
     /**
      * 商户回退单号，必填
      */

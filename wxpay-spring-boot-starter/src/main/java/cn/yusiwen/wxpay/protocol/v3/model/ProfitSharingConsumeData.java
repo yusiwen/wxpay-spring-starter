@@ -40,7 +40,7 @@ public class ProfitSharingConsumeData {
      * <p>
      * 直连模式分账发起和出资商户
      */
-    private String mchid;
+    private String mchId;
 
     /**
      * 微信订单号.
