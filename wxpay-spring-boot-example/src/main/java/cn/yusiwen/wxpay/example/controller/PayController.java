@@ -8,6 +8,7 @@ import cn.yusiwen.wxpay.protocol.v3.model.FundFlowBillParams;
 import cn.yusiwen.wxpay.protocol.v3.model.PayParams;
 import cn.yusiwen.wxpay.protocol.v3.model.Payer;
 import cn.yusiwen.wxpay.protocol.v3.model.TradeBillParams;
+import cn.yusiwen.wxpay.protocol.v3.model.TransactionQueryParams;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -25,7 +26,7 @@ import java.time.Month;
  * 支付接口开发样例，以Native支付为例.
  */
 @RestController
-@RequestMapping("/marketing")
+@RequestMapping("/wxpay")
 public class PayController {
 
     /**
@@ -40,7 +41,9 @@ public class PayController {
     private WechatApiProvider wechatApiProvider;
 
     /**
-     * 总流程建议为 生成商品订单 -> 生成对应的支付订单 -> 支付操作 -> 支付结果回调更新 -> 结束
+     * 总流程建议为:
+     * <p>
+     * 生成商品订单 - 生成对应的支付订单 - 支付操作 - 支付结果回调更新 - 结束
      * <p>
      * 此处建议在商品订单生成之后调用
      *
@@ -65,7 +68,7 @@ public class PayController {
         PayParams payParams = new PayParams();
         payParams.setDescription("wxpay-spring-boot-starter-example");
         // 商户侧唯一订单号 建议为商户侧支付订单号 订单表主键 或者唯一标识字段
-        payParams.setOutTradeNo("X135423420201521613448");
+        payParams.setOutTradeNo(orderId);
         // 需要定义回调通知
         payParams.setNotifyUrl("/wxpay/callbacks/transaction");
         Amount amount = new Amount();
@@ -81,6 +84,19 @@ public class PayController {
                 .getBody();
     }
 
+    /**
+     * 根据商户订单号查询支付状态
+     *
+     * @param orderId 支付订单号
+     * @return 应答报文体
+     */
+    @PostMapping("/queryTransaction")
+    public ObjectNode queryTransaction(@RequestParam String orderId) {
+
+        TransactionQueryParams params = new TransactionQueryParams();
+        params.setTransactionIdOrOutTradeNo(orderId);
+        return wechatApiProvider.directPayApi(TENANT_ID).queryTransactionByOutTradeNo(params).getBody();
+    }
 
     /**
      * 下载对账单 如果要解析内容的话自行实现
