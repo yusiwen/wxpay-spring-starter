@@ -101,26 +101,6 @@ public class WechatPayCallback {
     }
 
     /**
-     * 微信支付分账V2回调.
-     *
-     * @param params
-     *            the params
-     * @param consumeDataConsumer
-     *            the consume data consumer
-     * @return the map
-     * @since 1.0.0.RELEASE
-     */
-    @SneakyThrows
-    public Map<String, String> profitSharingCallback(ResponseSignVerifyParams params,
-            Consumer<cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData> consumeDataConsumer) {
-        String data = this.callback(params, EventType.TRANSACTION);
-        cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData consumeData = MAPPER.readValue(data, cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData.class);
-        consumeDataConsumer.accept(consumeData);
-        return response();
-
-    }
-
-    /**
      * 微信支付代金券核销回调.
      *
      * @param params
@@ -198,8 +178,8 @@ public class WechatPayCallback {
      * @since 1.0.0.RELEASE
      */
     @SneakyThrows
-    public Map<String, String> payscoreUserOrderCallback(ResponseSignVerifyParams params,
-            PayScoreConsumer payScoreConsumer) {
+    public Map<String, String> payScoreUserOrderCallback(ResponseSignVerifyParams params,
+                                                         PayScoreConsumer payScoreConsumer) {
         CallbackParams callbackParams = resolve(params);
         String eventType = callbackParams.getEventType();
 
@@ -361,20 +341,39 @@ public class WechatPayCallback {
     }
 
     /**
+     * 微信支付分账V2回调.
+     *
+     * @param params
+     *            the params
+     * @param consumeDataConsumer
+     *            the consume data consumer
+     * @return the map
+     * @since 1.0.0.RELEASE
+     */
+    @SneakyThrows
+    public Map<String, String> profitSharingCallbackV2(ResponseSignVerifyParams params,
+                                                     Consumer<cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData> consumeDataConsumer) {
+        String data = this.callback(params, EventType.TRANSACTION);
+        cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData consumeData = MAPPER.readValue(data, cn.yusiwen.wxpay.protocol.v3.model.ProfitSharingConsumeData.class);
+        consumeDataConsumer.accept(consumeData);
+        return response();
+    }
+
+    /**
      * 微信支付分账V3动账通知
      *
      * @param params
      *            the params
-     * @param profitsharingConsumeDataConsumer
-     *            the profitsharing consume data consumer
+     * @param profitSharingConsumeDataConsumer
+     *            the profit sharing consume data consumer
      * @return map map
      */
     @SneakyThrows
-    public Map<String, String> profitsharingCallback(ResponseSignVerifyParams params,
-            Consumer<ProfitSharingConsumeData> profitsharingConsumeDataConsumer) {
+    public Map<String, String> profitSharingCallback(ResponseSignVerifyParams params,
+                                                     Consumer<ProfitSharingConsumeData> profitSharingConsumeDataConsumer) {
         String callback = this.callback(params, EventType.TRANSACTION);
         ProfitSharingConsumeData consumeData = MAPPER.readValue(callback, ProfitSharingConsumeData.class);
-        profitsharingConsumeDataConsumer.accept(consumeData);
+        profitSharingConsumeDataConsumer.accept(consumeData);
         return response();
     }
 
