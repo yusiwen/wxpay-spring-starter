@@ -38,7 +38,7 @@ public class UserBusiCouponQueryParams {
      */
     private String appId;
     /**
-     * Openid信息，用户在appId下的唯一标识。
+     * OpenId信息，用户在appId下的唯一标识。
      */
     private String openId;
 }

@@ -271,10 +271,10 @@ public abstract class AbstractApi {
             MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<>();
             LocalDate billDate = params.getBillDate();
             queryParams.add("bill_date", billDate.format(DateTimeFormatter.ISO_DATE));
-            String subMchid = params.getSubMchid();
+            String subMchId = params.getSubMchId();
 
-            if (StringUtils.hasText(subMchid)) {
-                queryParams.add("sub_mchid", subMchid);
+            if (StringUtils.hasText(subMchId)) {
+                queryParams.add("sub_mchid", subMchId);
             }
 
             TradeBillType tradeBillType = Optional.ofNullable(params.getBillType()).orElse(TradeBillType.ALL);

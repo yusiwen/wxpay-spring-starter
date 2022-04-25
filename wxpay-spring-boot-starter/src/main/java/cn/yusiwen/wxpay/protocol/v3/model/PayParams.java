@@ -31,11 +31,11 @@ import lombok.EqualsAndHashCode;
 @Data
 public class PayParams extends AbstractPayParams {
     /**
-     * The Appid.
+     * The AppId.
      */
     private String appId;
     /**
-     * The Mchid.
+     * The MchId.
      */
     private String mchId;
 

@@ -31,7 +31,7 @@ import lombok.Data;
 @Data
 public class DirectCompleteServiceOrderParams {
     /**
-     * The Appid.
+     * The AppId.
      */
     private String appId;
     /**
@@ -51,7 +51,7 @@ public class DirectCompleteServiceOrderParams {
      */
     private String notifyUrl;
     /**
-     * The Openid.
+     * The OpenId.
      */
     private String openId;
     /**

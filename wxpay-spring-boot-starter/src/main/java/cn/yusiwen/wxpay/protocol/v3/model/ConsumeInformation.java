@@ -34,7 +34,7 @@ public class ConsumeInformation {
     /**
      * 核销商户号
      */
-    private String consumeMchid;
+    private String consumeMchId;
 
     /**
      * 核销时间 YYYY-MM-DDTHH:mm:ss.sss+TIMEZONE

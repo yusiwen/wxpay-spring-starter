@@ -47,7 +47,7 @@ public class StocksSendParams {
     /**
      * 创建批次的商户号
      */
-    private String stockCreatorMchid;
+    private String stockCreatorMchId;
     /**
      * 指定面额发券场景，券面额，其他场景不需要填，单位：分。 校验规则：仅在发券时指定面额及门槛的场景才生效，常规发券场景请勿传入该信息。
      */

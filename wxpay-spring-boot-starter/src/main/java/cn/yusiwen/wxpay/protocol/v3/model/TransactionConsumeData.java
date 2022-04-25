@@ -46,7 +46,7 @@ public class TransactionConsumeData {
      */
     private String appId;
     /**
-     * 直连模式商户号，服务商模式请解析spMchid
+     * 直连模式商户号，服务商模式请解析spMchId
      */
     private String mchId;
     /**

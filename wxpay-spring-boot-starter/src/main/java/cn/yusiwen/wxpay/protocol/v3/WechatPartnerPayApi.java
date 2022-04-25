@@ -83,15 +83,15 @@ public class WechatPartnerPayApi extends AbstractApi {
                     WechatMetaBean wechatMetaBean = wechatMetaContainer.getWechatMeta(tenantId());
                     PrivateKey privateKey = wechatMetaBean.getKeyPair().getPrivate();
 
-                    String subAppid = partnerPayParams.getSubAppid();
+                    String subAppId = partnerPayParams.getSubAppId();
                     long epochSecond = LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
                     String timestamp = String.valueOf(epochSecond);
                     String nonceStr = signatureProvider.nonceStrGenerator().generateId().toString().replaceAll("-", "");
                     String prepayId = body.get("prepay_id").asText();
-                    String paySign = signatureProvider.doRequestSign(privateKey, subAppid, timestamp, nonceStr,
+                    String paySign = signatureProvider.doRequestSign(privateKey, subAppId, timestamp, nonceStr,
                             prepayId);
 
-                    body.put("appid", subAppid);
+                    body.put("appid", subAppId);
                     body.put("partnerid", partnerPayParams.getSubMchId());
                     body.put("prepayid", prepayId);
                     body.put("package", "Sign=WXPay");
@@ -128,15 +128,15 @@ public class WechatPartnerPayApi extends AbstractApi {
                     WechatMetaBean wechatMetaBean = wechatMetaContainer.getWechatMeta(tenantId());
                     PrivateKey privateKey = wechatMetaBean.getKeyPair().getPrivate();
 
-                    String subAppid = partnerPayParams.getSubAppid();
+                    String subAppId = partnerPayParams.getSubAppId();
                     long epochSecond = LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
                     String timestamp = String.valueOf(epochSecond);
                     String nonceStr = signatureProvider.nonceStrGenerator().generateId().toString().replaceAll("-", "");
                     String packageStr = "prepay_id=" + body.get("prepay_id").asText();
-                    String paySign = signatureProvider.doRequestSign(privateKey, subAppid, timestamp, nonceStr,
+                    String paySign = signatureProvider.doRequestSign(privateKey, subAppId, timestamp, nonceStr,
                             packageStr);
 
-                    body.put("appId", subAppid);
+                    body.put("appId", subAppId);
                     body.put("timeStamp", timestamp);
                     body.put("nonceStr", nonceStr);
                     body.put("package", packageStr);

@@ -48,7 +48,7 @@ public class RedpackModel extends BaseModel {
     /**
      * Reopen ID
      */
-    private String reOpenid;
+    private String reOpenId;
     /**
      * Total amount
      */

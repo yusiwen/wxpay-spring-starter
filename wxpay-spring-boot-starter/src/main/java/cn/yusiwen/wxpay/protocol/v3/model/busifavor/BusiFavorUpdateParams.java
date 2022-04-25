@@ -129,11 +129,11 @@ public class BusiFavorUpdateParams {
          *
          * @see BusiFavorUseMethod#MINI_PROGRAMS
          */
-        private String miniProgramsAppid;
+        private String miniProgramsAppId;
         /**
          * 核销小程序path
          *
-         * @see #miniProgramsAppid
+         * @see #miniProgramsAppId
          */
         private String miniProgramsPath;
     }

@@ -78,7 +78,7 @@ public class CouponConsumeData {
     /**
      * 是否单品优惠
      */
-    private Boolean singleitem;
+    private Boolean singleItem;
     /**
      * 单品优惠特定信息
      */
@@ -92,7 +92,7 @@ public class CouponConsumeData {
     /**
      * 创建批次的商户号
      */
-    private String stockCreatorMchid;
+    private String stockCreatorMchId;
     /**
      * 批次号
      */

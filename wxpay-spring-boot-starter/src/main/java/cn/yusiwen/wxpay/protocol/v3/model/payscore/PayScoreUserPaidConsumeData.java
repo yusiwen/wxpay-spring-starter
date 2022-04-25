@@ -31,7 +31,7 @@ import lombok.Data;
 @Data
 public class PayScoreUserPaidConsumeData {
     /**
-     * The Appid.
+     * The AppId.
      */
     private String appId;
     /**
@@ -47,7 +47,7 @@ public class PayScoreUserPaidConsumeData {
      */
     private Location location;
     /**
-     * The Mchid.
+     * The MchId.
      */
     private String mchId;
     /**
@@ -59,7 +59,7 @@ public class PayScoreUserPaidConsumeData {
      */
     private String notifyUrl;
     /**
-     * The Openid.
+     * The OpenId.
      */
     private String openId;
     /**

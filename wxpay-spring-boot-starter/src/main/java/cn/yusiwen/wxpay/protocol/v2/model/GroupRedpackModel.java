@@ -48,7 +48,7 @@ public class GroupRedpackModel extends BaseModel {
     /**
      * Reopen ID
      */
-    private String reOpenid;
+    private String reOpenId;
     /**
      * Total amount
      */

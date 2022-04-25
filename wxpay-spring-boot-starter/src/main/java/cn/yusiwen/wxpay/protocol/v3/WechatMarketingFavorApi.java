@@ -163,7 +163,7 @@ public class WechatMarketingFavorApi extends AbstractApi {
         WechatPayProperties.V3 v3 = this.wechatMetaBean().getV3();
 
         params.setAppId(v3.getAppId());
-        params.setStockCreatorMchid(v3.getMchId());
+        params.setStockCreatorMchId(v3.getMchId());
         URI uri = UriComponentsBuilder.fromHttpUrl(type.uri(WeChatServer.CHINA)).build().expand(params.getOpenId())
                 .toUri();
         params.setOpenId(null);

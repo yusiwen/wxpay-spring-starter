@@ -32,7 +32,7 @@ import lombok.Data;
 public class PayScoreUserConfirmConsumeData {
 
     /**
-     * The Appid.
+     * The AppId.
      */
     private String appId;
     /**
@@ -44,11 +44,11 @@ public class PayScoreUserConfirmConsumeData {
      */
     private Location location;
     /**
-     * The Mchid.
+     * The MchId.
      */
     private String mchId;
     /**
-     * The Openid.
+     * The OpenId.
      */
     private String openId;
     /**

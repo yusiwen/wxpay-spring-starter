@@ -38,21 +38,21 @@ public class PayScoreUserPermissionConsumeData {
      */
     private boolean closed;
     /**
-     * The Appid.
+     * The AppId.
      */
     private String appId;
     /**
-     * The Mchid.
+     * The MchId.
      */
     private String mchId;
     /**
-     * The Openid.
+     * The OpenId.
      */
     private String openId;
     /**
      * The Openorclose time.
      */
-    private String openorcloseTime;
+    private String openOrCloseTime;
     /**
      * 只在 微信支付分授权回调中返回
      */

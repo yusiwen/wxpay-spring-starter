@@ -42,7 +42,7 @@ public class PartnerPayParams extends AbstractPayParams {
     /**
      * 子商户appId.
      */
-    private String subAppid;
+    private String subAppId;
     /**
      * 子商户号
      */

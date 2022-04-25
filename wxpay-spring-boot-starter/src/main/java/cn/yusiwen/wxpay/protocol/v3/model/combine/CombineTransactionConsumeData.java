@@ -92,7 +92,7 @@ public class CombineTransactionConsumeData {
         private String bankType;
 
         /**
-         * 子单发起方商户号，必须与发起方Appid有绑定关系。（即电商平台mchId）
+         * 子单发起方商户号，必须与发起方AppId有绑定关系。（即电商平台mchId）
          */
         private String mchId;
 

@@ -45,7 +45,7 @@ public class PartnerProfitSharingConsumeData {
      * <p>
      * 服务商模式分账出资商户
      */
-    private String subMchid;
+    private String subMchId;
 
     /**
      * 微信订单号.
