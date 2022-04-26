@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -33,6 +34,7 @@ public class CouponDetailsQueryParams {
      * <p>
      * 参考发券
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 代金券id

@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.batchtransfer;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -34,6 +35,7 @@ public class CreateBatchTransferParams {
     /**
      * 直连商户的appId
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 商家批次单号
@@ -84,6 +86,7 @@ public class CreateBatchTransferParams {
         /**
          * 用户在直连商户appId下的唯一标识
          */
+        @JsonProperty("openid")
         private String openId;
         /**
          * 收款用户姓名

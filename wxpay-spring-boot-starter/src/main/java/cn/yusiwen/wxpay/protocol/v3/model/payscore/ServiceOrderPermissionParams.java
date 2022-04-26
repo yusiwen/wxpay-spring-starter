@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -36,6 +37,7 @@ public class ServiceOrderPermissionParams {
     /**
      * 服务商申请的公众号或移动应用APPID，必填
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 授权协议号，必填

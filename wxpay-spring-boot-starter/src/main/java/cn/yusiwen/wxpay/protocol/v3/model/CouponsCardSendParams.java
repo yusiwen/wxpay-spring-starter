@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.OffsetDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -43,10 +44,12 @@ public class CouponsCardSendParams {
     /**
      * 消费卡归属appId
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 需为消费卡归属appId生成的openId。
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 商户此次发放凭据号。

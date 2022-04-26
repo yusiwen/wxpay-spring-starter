@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.combine;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -33,6 +34,7 @@ public class CombineCloseParams {
     /**
      * 合单商户appId，必填
      */
+    @JsonProperty("combine_appid")
     private String combineAppId;
     /**
      * 合单商户订单号，必填，商户侧需要保证同一商户下唯一
@@ -54,6 +56,7 @@ public class CombineCloseParams {
         /**
          * 子单发起方商户号，必填，必须与发起方appId有绑定关系。
          */
+        @JsonProperty("mchid")
         private String mchId;
 
         /**
@@ -68,6 +71,7 @@ public class CombineCloseParams {
          * <p>
          * 直连商户不用传二级商户号。
          */
+        @JsonProperty("sub_mchid")
         private String subMchId;
 
     }

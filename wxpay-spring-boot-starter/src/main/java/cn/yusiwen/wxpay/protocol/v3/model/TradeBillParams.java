@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.TarType;
@@ -56,6 +57,7 @@ public class TradeBillParams {
      * <p>
      * 注意：仅适用于电商平台 服务商
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
     /**
      * 账单类型,不填则默认值为{@link TradeBillType#ALL}

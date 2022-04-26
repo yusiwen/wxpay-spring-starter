@@ -21,6 +21,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.profitsharing;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -34,6 +35,7 @@ public class ProfitSharingOrder {
     /**
      * 应用ID，自动注入
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 微信订单号，必填

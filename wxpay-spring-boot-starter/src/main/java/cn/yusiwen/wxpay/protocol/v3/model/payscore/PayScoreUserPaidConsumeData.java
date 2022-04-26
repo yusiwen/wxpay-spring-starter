@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -33,6 +34,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The AppId.
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * The Attach.
@@ -49,6 +51,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The MchId.
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * The Need collection.
@@ -61,6 +64,7 @@ public class PayScoreUserPaidConsumeData {
     /**
      * The OpenId.
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * The Order id.

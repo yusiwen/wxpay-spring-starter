@@ -19,6 +19,7 @@
 
 package cn.yusiwen.wxpay.protocol.v3.model.partner;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -32,6 +33,7 @@ public class CloseTransParams {
     /**
      * 子商户号
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
     /**
      * 商户订单号

@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.busifavor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -34,5 +35,6 @@ public class BusiFavorNotifyConfig {
      * <p>
      * 用于回调通知时，计算返回操作用户的openId（诸如领券用户），支持小程序or公众号的APPID； 如该字段不填写，则回调通知中涉及到用户身份信息的openId与unionid都将为空。
      */
+    @JsonProperty("notify_appid")
     private String notifyAppId;
 }

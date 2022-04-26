@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -35,6 +36,7 @@ public class CancelServiceOrderParams {
     /**
      * 与传入的商户号建立了支付绑定关系的appId，必填
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 服务ID，必填

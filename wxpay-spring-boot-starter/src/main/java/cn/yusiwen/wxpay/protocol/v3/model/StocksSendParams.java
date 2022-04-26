@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -35,6 +36,7 @@ public class StocksSendParams {
     /**
      * 用户openId 该openId需要与接口传入中的appId有对应关系。
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 商户单据号
@@ -43,10 +45,12 @@ public class StocksSendParams {
     /**
      * 公众账号ID
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 创建批次的商户号
      */
+    @JsonProperty("stock_creator_mchid")
     private String stockCreatorMchId;
     /**
      * 指定面额发券场景，券面额，其他场景不需要填，单位：分。 校验规则：仅在发券时指定面额及门槛的场景才生效，常规发券场景请勿传入该信息。

@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.v2.model.allocation.Receiver;
@@ -40,6 +41,7 @@ public class ProfitSharingConsumeData {
      * <p>
      * 直连模式分账发起和出资商户
      */
+    @JsonProperty("mchid")
     private String mchId;
 
     /**

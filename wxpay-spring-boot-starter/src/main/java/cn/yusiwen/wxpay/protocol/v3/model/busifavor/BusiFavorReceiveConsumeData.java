@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -55,11 +56,13 @@ public class BusiFavorReceiveConsumeData {
     /**
      * 微信用户在appId下的唯一标识。
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 微信用户在同一个微信开放平台账号下的唯一用户标识， unionid获取方式请参见 <a target= "_blank" href=
      * "https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/union-id.html">《UnionID机制说明》</a> 文档。
      */
+    @JsonProperty("unionid")
     private String unionId;
     /**
      * 发券商户号

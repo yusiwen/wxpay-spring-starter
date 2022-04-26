@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.combine;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -31,5 +32,6 @@ public class CombinePayerInfo {
     /**
      * 使用合单appId获取的对应用户openId。是用户在商户appId下的唯一标识。
      */
+    @JsonProperty("openid")
     private String openId;
 }

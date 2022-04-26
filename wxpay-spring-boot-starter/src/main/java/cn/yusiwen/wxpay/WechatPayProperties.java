@@ -21,6 +21,7 @@ package cn.yusiwen.wxpay;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -50,6 +51,7 @@ public class WechatPayProperties {
         /**
          * app id for wechat pay is required
          */
+        @JsonProperty("appid")
         private String appId;
         /**
          * app secret for wechat pay is required
@@ -62,6 +64,7 @@ public class WechatPayProperties {
         /**
          * mchId for wechat pay is required
          */
+        @JsonProperty("mchid")
         private String mchId;
         /**
          * partnerKey for wechat pay is optional

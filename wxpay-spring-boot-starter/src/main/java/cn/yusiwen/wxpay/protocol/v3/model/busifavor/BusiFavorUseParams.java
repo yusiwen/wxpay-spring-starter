@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.OffsetDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -43,6 +44,7 @@ public class BusiFavorUseParams {
     /**
      * 公众账号ID
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 请求核销时间
@@ -56,6 +58,7 @@ public class BusiFavorUseParams {
     /**
      * 用户标识，用户的唯一标识，做安全校验使用
      */
+    @JsonProperty("openid")
     private String openId;
 
 }

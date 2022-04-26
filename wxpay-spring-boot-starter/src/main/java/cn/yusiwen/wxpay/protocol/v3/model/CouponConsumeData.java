@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.CouponStatus;
@@ -92,6 +93,7 @@ public class CouponConsumeData {
     /**
      * 创建批次的商户号
      */
+    @JsonProperty("stock_creator_mchid")
     private String stockCreatorMchId;
     /**
      * 批次号

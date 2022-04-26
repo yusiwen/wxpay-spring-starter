@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v2.model.allocation;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -37,6 +38,7 @@ public class BaseProfitSharingReceiverModel extends BaseModel {
      * <p>
      * 微信支付分配的商户号
      */
+    @JsonProperty("mchid")
     private String mchId;
 
     /**
@@ -44,6 +46,7 @@ public class BaseProfitSharingReceiverModel extends BaseModel {
      * <p>
      * 微信分配的公众账号ID
      */
+    @JsonProperty("appid")
     private String appId;
 
 }

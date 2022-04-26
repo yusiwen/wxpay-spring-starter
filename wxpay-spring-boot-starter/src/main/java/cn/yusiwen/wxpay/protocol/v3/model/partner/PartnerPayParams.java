@@ -19,6 +19,7 @@
 
 package cn.yusiwen.wxpay.protocol.v3.model.partner;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -34,18 +35,22 @@ public class PartnerPayParams extends AbstractPayParams {
     /**
      * 服务商公众号ID
      */
+    @JsonProperty("sp_appid")
     private String spAppId;
     /**
      * 服务商户号
      */
+    @JsonProperty("sp_mchid")
     private String spMchId;
     /**
      * 子商户appId.
      */
+    @JsonProperty("sub_appid")
     private String subAppId;
     /**
      * 子商户号
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
 
 }

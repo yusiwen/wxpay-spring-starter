@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.busifavor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.BusiFavorCodeDisplayMode;
@@ -52,6 +53,7 @@ public class CustomEntrance {
      * <p>
      * 从券详情可跳转至公众号
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * code展示模式

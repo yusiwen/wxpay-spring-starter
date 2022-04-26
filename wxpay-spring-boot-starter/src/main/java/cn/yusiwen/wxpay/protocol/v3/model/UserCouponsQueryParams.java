@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -31,10 +32,12 @@ public class UserCouponsQueryParams {
     /**
      * 用户公众号服务号标识
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 公众服务号ID
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 批次号
@@ -47,14 +50,17 @@ public class UserCouponsQueryParams {
     /**
      * 创建批次的商户号
      */
+    @JsonProperty("creator_mchid")
     private String creatorMchId;
     /**
      * 批次发放商户号
      */
+    @JsonProperty("sender_mchid")
     private String senderMchId;
     /**
      * 可用商户号
      */
+    @JsonProperty("available_mchid")
     private String availableMchId;
     /**
      * 分页页码

@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -33,6 +34,7 @@ public class DirectCompleteServiceOrderParams {
     /**
      * The AppId.
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * The Attach.
@@ -53,6 +55,7 @@ public class DirectCompleteServiceOrderParams {
     /**
      * The OpenId.
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * The Out order no.

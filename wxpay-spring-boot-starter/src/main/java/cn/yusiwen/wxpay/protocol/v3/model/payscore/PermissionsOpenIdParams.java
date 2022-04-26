@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -35,10 +36,12 @@ public class PermissionsOpenIdParams {
     /**
      * openId，必填
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 仅仅适用于解除用户授权关系（openId）API
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 服务ID，必填

@@ -19,6 +19,7 @@
 
 package cn.yusiwen.wxpay.protocol.v3.model.profitsharing;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -32,6 +33,7 @@ public class PartnerQueryReturnOrderParams {
     /**
      * 子商户号，选填
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
     /**
      * 商户回退单号，必填

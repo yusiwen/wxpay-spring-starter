@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.busifavor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -34,6 +35,7 @@ public class MiniProgramsInfo {
      * <p>
      * 商家小程序appId要与归属商户号有M-A or M-m-suba关系。
      */
+    @JsonProperty("mini_programs_appid")
     private String miniProgramsAppId;
     /**
      * 商家小程序path

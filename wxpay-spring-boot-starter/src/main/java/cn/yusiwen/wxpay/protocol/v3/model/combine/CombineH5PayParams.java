@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -37,10 +38,12 @@ public class CombineH5PayParams {
     /**
      * 合单商户appId，必填
      */
+    @JsonProperty("combine_appid")
     private String combineAppId;
     /**
      * 合单商户号，必填
      */
+    @JsonProperty("combine_mchid")
     private String combineMchId;
     /**
      * 合单商户订单号，必填，商户侧需要保证同一商户下唯一

@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -31,13 +32,16 @@ public class Payer {
     /**
      * 用户标识
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 用户服务标识
      */
+    @JsonProperty("sp_openid")
     private String spOpenId;
     /**
      * 用户子标识
      */
+    @JsonProperty("sub_openid")
     private String subOpenId;
 }

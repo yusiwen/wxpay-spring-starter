@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.busifavor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -36,9 +37,11 @@ public class UserBusiCouponQueryParams {
     /**
      * 与当前调用接口商户号有绑定关系的appId。支持小程序appId与公众号appId。
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * OpenId信息，用户在appId下的唯一标识。
      */
+    @JsonProperty("openid")
     private String openId;
 }

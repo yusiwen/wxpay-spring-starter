@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -40,6 +41,7 @@ public class UserServiceOrderParams {
     /**
      * 与传入的商户号建立了支付绑定关系的appId，必填
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 服务ID，必填
@@ -88,6 +90,7 @@ public class UserServiceOrderParams {
      * <p>
      * 免确认订单：必填 需确认订单：不填
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 是否需要用户确认，选填

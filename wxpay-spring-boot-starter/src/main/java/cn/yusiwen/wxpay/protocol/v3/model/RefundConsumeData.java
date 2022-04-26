@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.RefundStatus;
@@ -37,6 +38,7 @@ public class RefundConsumeData {
     /**
      * 直连商户号
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * 商户订单号

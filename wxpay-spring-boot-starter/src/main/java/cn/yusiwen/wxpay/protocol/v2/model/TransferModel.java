@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v2.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -31,10 +32,12 @@ public class TransferModel extends BaseModel {
     /**
      * Merchant app ID
      */
+    @JsonProperty("mch_appid")
     private String mchAppId;
     /**
      * Merchant ID
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * Device information
@@ -47,6 +50,7 @@ public class TransferModel extends BaseModel {
     /**
      * Open ID
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * Check name

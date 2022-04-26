@@ -19,6 +19,7 @@
 
 package cn.yusiwen.wxpay.protocol.v3.model.profitsharing;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.ReceiverType;
@@ -34,16 +35,19 @@ public class PartnerAddReceiversParams {
     /**
      * 子商户号，选填
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
     /**
      * 应用ID，自动注入
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 子商户应用ID，选填
      * <p>
      * 分账接收方类型包含{@code PERSONAL_SUB_OPENID}时必填
      */
+    @JsonProperty("sub_appid")
     private String subAppId;
     /**
      * 分账接收方类型，必填

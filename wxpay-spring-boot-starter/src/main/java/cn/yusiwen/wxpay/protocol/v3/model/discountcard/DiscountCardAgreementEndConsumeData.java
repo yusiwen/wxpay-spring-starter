@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.discountcard;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.ContractStatus;
@@ -37,6 +38,7 @@ public class DiscountCardAgreementEndConsumeData {
     /**
      * 应用appId需要绑定微信商户平台
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 先享卡ID，唯一标识一个先享卡
@@ -53,6 +55,7 @@ public class DiscountCardAgreementEndConsumeData {
     /**
      * 商户号
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * 用户先享卡目标列表
@@ -61,6 +64,7 @@ public class DiscountCardAgreementEndConsumeData {
     /**
      * 用户标识，用户在{@code appId}下的唯一标识
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * 商户领卡号，商户在请求领卡预受理接口时传入的领卡请求号，同一个商户号下必须唯一，要求32个字符内，只能是数字、大小写字母_-|*

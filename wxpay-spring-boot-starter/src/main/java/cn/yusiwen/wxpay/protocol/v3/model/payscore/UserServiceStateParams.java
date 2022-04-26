@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -37,6 +38,7 @@ public class UserServiceStateParams {
     /**
      * 微信用户在商户对应appId下的唯一标识。
      */
+    @JsonProperty("openid")
     private String openId;
 
 }

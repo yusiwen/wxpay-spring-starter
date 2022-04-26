@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v2.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -32,10 +33,12 @@ public class GroupRedpackModel extends BaseModel {
     /**
      * Wechat App ID
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * Merchant ID
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * Merchant bill No.
@@ -48,6 +51,7 @@ public class GroupRedpackModel extends BaseModel {
     /**
      * Reopen ID
      */
+    @JsonProperty("re_openid")
     private String reOpenId;
     /**
      * Total amount

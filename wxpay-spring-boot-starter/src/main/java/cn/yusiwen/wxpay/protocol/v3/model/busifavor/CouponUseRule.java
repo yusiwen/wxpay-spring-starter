@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.busifavor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.BusiFavorUseMethod;
@@ -51,6 +52,7 @@ public class CouponUseRule {
      *
      * @see BusiFavorUseMethod#MINI_PROGRAMS
      */
+    @JsonProperty("mini_programs_appid")
     private String miniProgramsAppId;
     /**
      * 核销小程序path

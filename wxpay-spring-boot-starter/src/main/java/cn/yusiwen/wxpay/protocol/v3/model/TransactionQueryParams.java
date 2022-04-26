@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.v3.WechatDirectPayApi;
@@ -33,6 +34,7 @@ public class TransactionQueryParams {
     /**
      * 商户id
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * <ul>

@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -34,6 +35,7 @@ public class ConsumeInformation {
     /**
      * 核销商户号
      */
+    @JsonProperty("consume_mchid")
     private String consumeMchId;
 
     /**

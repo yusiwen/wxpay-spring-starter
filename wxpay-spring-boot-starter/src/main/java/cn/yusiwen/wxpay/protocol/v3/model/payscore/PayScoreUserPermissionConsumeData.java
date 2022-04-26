@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.payscore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -40,14 +41,17 @@ public class PayScoreUserPermissionConsumeData {
     /**
      * The AppId.
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * The MchId.
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * The OpenId.
      */
+    @JsonProperty("openid")
     private String openId;
     /**
      * The Openorclose time.

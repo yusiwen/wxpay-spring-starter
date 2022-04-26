@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.discountcard;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -40,6 +41,7 @@ public class DiscountCardPreRequestParams {
     /**
      * APPID，必传，自动从配置中注入
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 通知商户URL，必传

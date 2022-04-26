@@ -19,6 +19,7 @@
 
 package cn.yusiwen.wxpay.protocol.v3.model.profitsharing;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -46,6 +47,7 @@ public class ReturnOrdersParams {
      * <p>
      * 分账回退的出资商户，只能对原分账请求中成功分给商户接收方进行回退
      */
+    @JsonProperty("return_mchid")
     private String returnMchId;
     /**
      * 回退金额，必填

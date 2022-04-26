@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -39,6 +40,7 @@ public class ProfitSharingConsumeData {
      * <p>
      * 直连模式分账发起和出资商户
      */
+    @JsonProperty("mchid")
     private String mchId;
 
     /**

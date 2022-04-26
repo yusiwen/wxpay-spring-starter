@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.TradeState;
@@ -44,26 +45,32 @@ public class TransactionConsumeData {
     /**
      * 直连模式应用ID，服务商模式请解析spAppid
      */
+    @JsonProperty("appid")
     private String appId;
     /**
      * 直连模式商户号，服务商模式请解析spMchId
      */
+    @JsonProperty("mchid")
     private String mchId;
     /**
      * 服务商模式-服务商APPID
      */
+    @JsonProperty("sp_appid")
     private String spAppId;
     /**
      * 服务商模式-服务商户号
      */
+    @JsonProperty("sp_mchid")
     private String spMchId;
     /**
      * 服务商模式-子商户appId
      */
+    @JsonProperty("sub_appid")
     private String subAppId;
     /**
      * 服务商模式-子商户商户id
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
     /**
      * 附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用
@@ -123,6 +130,7 @@ public class TransactionConsumeData {
         /**
          * 用户在直连商户appId下的唯一标识。
          */
+        @JsonProperty("openid")
         private String openId;
     }
 

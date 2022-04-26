@@ -20,6 +20,7 @@ package cn.yusiwen.wxpay.protocol.v3.model.combine;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.enumeration.TradeState;
@@ -39,11 +40,13 @@ public class CombineTransactionConsumeData {
     /**
      * 合单商户appId，即合单发起方的appId
      */
+    @JsonProperty("combine_appid")
     private String combineAppId;
 
     /**
      * 合单商户号.
      */
+    @JsonProperty("combine_mchid")
     private String combineMchId;
 
     /**
@@ -94,6 +97,7 @@ public class CombineTransactionConsumeData {
         /**
          * 子单发起方商户号，必须与发起方AppId有绑定关系。（即电商平台mchId）
          */
+        @JsonProperty("mchid")
         private String mchId;
 
         /**
@@ -104,6 +108,7 @@ public class CombineTransactionConsumeData {
         /**
          * 二级商户商户号，由微信支付生成并下发。 服务商子商户的商户号，被合单方。直连商户不用传二级商户号。
          */
+        @JsonProperty("sub_mchid")
         private String subMchId;
 
         /**

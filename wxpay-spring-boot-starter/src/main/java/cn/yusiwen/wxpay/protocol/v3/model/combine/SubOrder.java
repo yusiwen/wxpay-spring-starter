@@ -18,6 +18,7 @@
  */
 package cn.yusiwen.wxpay.protocol.v3.model.combine;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import cn.yusiwen.wxpay.protocol.v3.model.SettleInfo;
@@ -48,6 +49,7 @@ public class SubOrder {
     /**
      * 子单发起方商户号，必填，必须与发起方appId有绑定关系。
      */
+    @JsonProperty("mchid")
     private String mchId;
 
     /**
@@ -62,6 +64,7 @@ public class SubOrder {
      * <p>
      * 直连商户不用传二级商户号。
      */
+    @JsonProperty("sub_mchid")
     private String subMchId;
 
     /**
