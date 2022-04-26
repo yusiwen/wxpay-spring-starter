@@ -13,7 +13,7 @@
   </parent>
 
   <artifactId>wxpay-spring-boot</artifactId>
-  <version>1.0.1.RELEASE</version>
+  <version>1.0.2-SNAPSHOT</version>
 
   <name>wxpay-spring-boot</name>
   <description>Spring boot project for WeChat payment</description>
@@ -30,7 +30,7 @@
     <connection>scm:git:ssh://git@github.com/yusiwen/wxpay-spring-boot.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/yusiwen/wxpay-spring-boot.git</developerConnection>
     <url>https://github.com/yusiwen/wxpay-spring-boot</url>
-    <tag>v1.0.1.RELEASE</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
