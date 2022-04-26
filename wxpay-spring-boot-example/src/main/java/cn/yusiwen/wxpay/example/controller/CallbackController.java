@@ -117,6 +117,7 @@ public class CallbackController {
         params.setBody(body);
         return wechatApiProvider.callback(TENANT_ID).transactionCallback(params, data -> {
             //TODO 对回调解析的结果进行消费  需要保证消费的幂等性 微信有可能多次调用此接口
+            LOGGER.info(data.toString());
         });
     }
 

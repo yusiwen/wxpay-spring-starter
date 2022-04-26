@@ -74,10 +74,6 @@ public class PayController {
         Amount amount = new Amount();
         amount.setTotal(1);
         payParams.setAmount(amount);
-        // 此类支付  Payer 必传  且openId需要同appId有绑定关系 具体去看文档
-        Payer payer = new Payer();
-        payer.setOpenId("ooadI5kQYrrCqpgbisvC8bEw_oUc");
-        payParams.setPayer(payer);
 
         return wechatApiProvider.directPayApi(TENANT_ID)
                 .nativePay(payParams)
