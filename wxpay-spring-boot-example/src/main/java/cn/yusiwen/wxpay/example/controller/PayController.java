@@ -6,7 +6,6 @@ import cn.yusiwen.wxpay.protocol.v3.WechatDirectPayApi;
 import cn.yusiwen.wxpay.protocol.v3.model.Amount;
 import cn.yusiwen.wxpay.protocol.v3.model.FundFlowBillParams;
 import cn.yusiwen.wxpay.protocol.v3.model.PayParams;
-import cn.yusiwen.wxpay.protocol.v3.model.Payer;
 import cn.yusiwen.wxpay.protocol.v3.model.TradeBillParams;
 import cn.yusiwen.wxpay.protocol.v3.model.TransactionQueryParams;
 import com.fasterxml.jackson.databind.node.ObjectNode;
